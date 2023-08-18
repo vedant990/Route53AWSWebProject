@@ -32,24 +32,42 @@ Before diving into this showcase, make sure you have the following prerequisites
     Registered Domain: You should have a registered domain name on AWS Route 53 that you'd like to associate with your static website.
     Git Installed: Git is a version control system that you'll use to clone the project repository and manage any code changes.
 
-Setup Overview
+S    Create an EC2 Instance
+        Log in to your AWS Management Console.
+        Navigate to the EC2 dashboard.
+        Click on "Launch Instance" to create a new EC2 instance.
+        Choose an appropriate Amazon Machine Image (AMI) based on your website's requirements.
+        Configure instance details, including instance type, network settings, and storage.
+        Configure security groups to allow incoming web traffic (HTTP/HTTPS).
+        Create or select an existing key pair for SSH access to the instance.
+        Review your configuration and launch the instance.
 
-This showcase will guide you through the process of deploying your static website using AWS services. Here's an overview of the steps you'll take:
+    Allocate an Elastic IP (Optional but Recommended)
+        In the EC2 Dashboard, navigate to "Elastic IPs."
+        Click on "Allocate new address" and then "Allocate."
+        Select the newly allocated Elastic IP and choose "Actions" > "Associate IP address."
+        Associate the Elastic IP with your EC2 instance.
 
-    Create an EC2 Instance: Launch an Amazon EC2 instance to serve as the host for your static website.
-    Allocate an Elastic IP (Optional but Recommended): Ensure a stable IP address for your website by allocating an Elastic IP.
-    Create a Route 53 Hosted Zone: Set up a Route 53 hosted zone to manage your domain's DNS records.
-    Create Record Sets: Configure "A" or "AAAA" record sets in Route 53 to point to your EC2 instance.
-    Update DNS at Your Domain Registrar: Make changes at your domain registrar to use Route 53 name servers.
-    Upload Website Content: Connect to your EC2 instance and upload your website's HTML, CSS, and other assets.
-    Access Your Website: Once everything is set up, your static website will be accessible using your registered domain name.
-...
+    Create a Route 53 Hosted Zone
+        In the Route 53 Dashboard, click "Create Hosted Zone."
+        Enter your domain name (e.g., example.com) and create the hosted zone.
 
-### 7. Access Your Website
+    Create Record Sets
+        Inside your hosted zone, click "Create Record Set."
+        Create an "A" record or "AAAA" record (for IPv6) pointing to your EC2 instance's Elastic IP address.
 
-1. Wait for DNS propagation to complete.
-2. Open a web browser and enter your domain name (e.g., http://www.example.com) to access your static website.
+    Update DNS at Your Domain Registrar
+        Go to your domain registrar's website and log in.
+        Update the DNS records for your domain to use the Route 53 name servers.
+        Wait for DNS changes to propagate (may take some time).
 
+    Upload Website Content
+        SSH into your EC2 instance using the key pair you configured during instance setup.
+        Upload your website content (HTML, CSS, JavaScript, etc.) to the appropriate directory on the instance.
+
+    Access Your Website
+        Wait for DNS propagation to complete (this might take a while).
+        Open a web browser and enter your domain name (e.g., http://www.example.com) to access your static website.
 ## Contributing
 
 We welcome contributions to improve and expand this project. Here's how you can contribute:
