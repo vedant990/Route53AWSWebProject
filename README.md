@@ -85,7 +85,7 @@ Upload your website files to your EC2 instance:
     Upload your website's HTML, CSS, and other assets to the appropriate directory on the instance.
 
 To proceed, follow the Upload Website Content guide.
-# #7-access-your-website
+# #7 Acess Your Website
 
     Ensure that you have completed all the previous setup steps, including creating an EC2 instance, allocating an Elastic IP, setting up a Route 53 hosted zone, creating record sets, updating DNS at your domain registrar, and uploading your website content.
 
