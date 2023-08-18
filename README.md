@@ -5,8 +5,8 @@
 Welcome to the documentation for **My AWS Static Website Project**. This documentation provides a detailed overview of the project's purpose, setup, deployment, and usage.
 ![image](https://github.com/vedant990/Route53AWSWebProject/assets/121371568/45ff2dcc-49e2-47f8-8845-f6e40311df82)
 
+https://github.com/vedant990/Route53AWSWebProject/assets/121371568/65f8f89a-a182-4b03-8563-a8381a19abde
 
-https://github.com/vedant990/Route53AWSWebProject/assets/121371568/a03dadb5-767b-4c15-9448-9c6edd5ef727
 
 
 ## Table of Contents
