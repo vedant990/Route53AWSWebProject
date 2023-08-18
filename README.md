@@ -19,11 +19,11 @@ Welcome to the documentation for **My AWS Static Website Project**. This documen
 4. [Contributing](#contributing)
 5. [License](#license)
 
-# #project-overview
+# Project-overview
 
 Welcome to my AWS Static Website Project showcase! This project is a demonstration of how to create and deploy a static website using Amazon Web Services (AWS). By utilizing AWS Route 53 for domain management and Amazon EC2 for hosting the website content, this project showcases the seamless integration of AWS services for web hosting. Whether you're a newcomer to AWS or an enthusiast looking for a straightforward static website deployment, this showcase will walk you through the process step by step.
 
-# #prerequisites
+# Prerequisites
 
 Before diving into this showcase, make sure you have the following prerequisites:
 
@@ -32,7 +32,7 @@ Before diving into this showcase, make sure you have the following prerequisites
     Registered Domain: You should have a registered domain name on AWS Route 53 that you'd like to associate with your static website.
     Git Installed: Git is a version control system that you'll use to clone the project repository and manage any code changes.
 
-# #1-create-an-ec2-instance
+# Create an EC2 Instance
 
     Log in to your AWS Management Console.
     Navigate to the EC2 dashboard.
@@ -43,7 +43,7 @@ Before diving into this showcase, make sure you have the following prerequisites
     Create or select an existing key pair for SSH access to the instance.
     Review your configuration and launch the instance.
 
-# #2-allocate-an-elastic-ip-optional-but-recommended
+# Allocate an Elastic IP (Optional but Recommended)
 
 Ensure a stable IP for your website with an Elastic IP:
 
@@ -53,7 +53,7 @@ Ensure a stable IP for your website with an Elastic IP:
     Associate the Elastic IP with your EC2 instance.
 
 To continue, visit the Allocate an Elastic IP guide.
-## 3-create-a-route-53-hosted-zone
+# Create a Route 53 Hosted Zone
 
 Manage your domain's DNS records using Route 53:
 
@@ -61,14 +61,14 @@ Manage your domain's DNS records using Route 53:
     Enter your domain name (e.g., example.com) and create the hosted zone.
 
 Jump to the Create a Route 53 Hosted Zone guide.
-# #4-create-record-sets
+# Create Record Sets
 
 IConnect your domain to your EC2 instance:
 
     Inside your hosted zone, click "Create Record Set."
     Create an "A" record or "AAAA" record (for IPv6) pointing to your EC2 instance's Elastic IP address.
 To proceed, follow the Create Record Sets guide.
-# #5-update-dns-at-your-domain-registrar)
+# Update DNS at Your Domain Registrar
 
 Update DNS for proper routing:
 
@@ -77,7 +77,7 @@ Update DNS for proper routing:
     Wait for DNS changes to propagate (may take some time).
 
 For detailed instructions, head over to the Update DNS at Your Domain Registrar guide.
-# #6-upload-website-content
+# Upload Website Content
 
 Upload your website files to your EC2 instance:
 
@@ -85,7 +85,7 @@ Upload your website files to your EC2 instance:
     Upload your website's HTML, CSS, and other assets to the appropriate directory on the instance.
 
 To proceed, follow the Upload Website Content guide.
-# #7 Acess Your Website
+# 7 Acess Your Website
 
     Ensure that you have completed all the previous setup steps, including creating an EC2 instance, allocating an Elastic IP, setting up a Route 53 hosted zone, creating record sets, updating DNS at your domain registrar, and uploading your website content.
 
